@@ -2,6 +2,8 @@
 ini_set('display_errors');
 error_reporting(E_ALL);
 //echo "demo!!!!";
+echo "<a href='newStudent.html'>Add a new student</a>";
+echo "<br>";
 require $_SERVER['DOCUMENT_ROOT'].'/../config.php';
 
 try {
@@ -14,6 +16,7 @@ catch (PDOException $e){
 
 //SELECT *
 
+
 //define query
 $sql = "SELECT * FROM student";
 
@@ -25,6 +28,7 @@ $statement->execute();
 
 //process
 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+    echo "<h1>Approve Requests</h1>";
     echo "<ol>";
 foreach($result as $row){
     echo "<li>".$row['last']. ", ".$row['first']."</li>";
