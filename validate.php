@@ -3,7 +3,8 @@ ini_set('display_errors');
 error_reporting(E_ALL);
 //echo "demo!!!!";
 require $_SERVER['DOCUMENT_ROOT'].'/../config.php';
-
+echo "<a href='index.php'>RETURN TO STUDENT LIST</a>";
+echo "<br>";
 try {
     $dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
     echo 'connected to database!';
@@ -36,6 +37,7 @@ $statement->bindParam(':Advisor', $Advisor);
 
 //step 4 - execute the query
 $statement->execute();
+
 
 //step 5 - optional
 }

@@ -28,7 +28,7 @@ $statement->execute();
 
 //process
 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-    echo "<h1>Approve Requests</h1>";
+    echo "<h1>Students</h1>";
     echo "<ol>";
 foreach($result as $row){
     echo "<li>".$row['last']. ", ".$row['first']."</li>";
